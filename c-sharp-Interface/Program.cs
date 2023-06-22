@@ -14,9 +14,14 @@ internal class Program
         double c = double.Parse(Console.ReadLine());
 
 
-        IShape[] shape = { new Circle(a), new Rectangle(b, c) };
+        IShape[] shape = { new Circle(a), new Rectangle(b, c),new Square(2.5) };
 
         Console.WriteLine($"the Area of Circle is:{shape[0].getArea()}");
         Console.WriteLine($"the Area of Rectangle is:{shape[1].getArea()}");
+        Console.WriteLine($"the Area of square  is:{shape[2].getArea()}");
+
+        Square sqr1 =new Square(2.5);
+        Square sqr2 = new Square(3);
+        Console.WriteLine(sqr1.CompareTo(sqr2));
     }
 }
